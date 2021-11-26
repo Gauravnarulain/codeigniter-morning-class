@@ -8,6 +8,6 @@ class Genre extends Model
 {
     protected  $table = "genre";
 
-    protected $primaryKey = 'id';
-    protected $allowedFields = ['title', 'status'];
+    protected $primaryKey = 'id'; // for reference
+    protected $allowedFields = ['title', 'status']; // save/insert / update
 }

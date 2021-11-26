@@ -6,5 +6,5 @@ use CodeIgniter\Model;
 
 class Movie extends Model
 {
-    protected  $table = "movie";
+    protected  $table = "movies";
 }

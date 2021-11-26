@@ -4,16 +4,14 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
+    private $genre;
+    function __construct()
+    {
+        $this->genre = new \App\Models\Genre();
+    }
     public function index()
     {
-        $genre = new \App\Models\Genre();
-        $data['genre'] = $genre->findAll();
-
+        $data['genre'] = $this->genre->findAll();
         return view('welcome_message', $data);
-    }
-    public function movie_list($str = '')
-    {
-        // echo ucwords($str) . ' Movie List';
-        return view('movie/movies');
     }
 }
