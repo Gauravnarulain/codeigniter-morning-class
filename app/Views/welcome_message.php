@@ -1,6 +1,19 @@
 <?php include('layouts/header.php') ?>
 <div class="row">
     <div class="col-12">
+        <?= form_open('home/store'); ?>
+        <div class="form-group">
+            <lable>Movie Category</lable>
+            <input type="text" name="title" id="title" class="form-control" />
+        </div>
+        <div class="">&nbsp;</div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary btn-sm" name="btnsave" value="Save" />
+        </div>
+        <div class="">&nbsp;</div>
+        <?= form_close(); ?>
+    </div>
+    <div class="col-12">
         <div class="list-group">
             <?php
             if (!empty($genre)) {
