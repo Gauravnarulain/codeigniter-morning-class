@@ -17,16 +17,18 @@ class Home extends BaseController
     }
     public function store()
     {
+        $postArray = $this->request->getVar();
+
         $data = array(
-            'title' => 'Abc',
-            'created' => date('Y-m-d h:i:s'),
-            'status' => 'Active'
+            'title' => $postArray['title'],
+            'created' => $postArray['releasedate'],
+            'status' => $postArray['status']
         );
         $res = $this->genre->insert($data);
         if ($res)
-            echo "Data added successfully";
+            return redirect()->back()->with('success', 'data has been saved successfully');
         else
-            echo "Error, while processing your request";
+            return redirect()->back()->with('error', 'error, while processing your request');;
     }
     public function update()
     {

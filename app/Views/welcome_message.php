@@ -1,10 +1,23 @@
 <?php include('layouts/header.php') ?>
 <div class="row">
     <div class="col-12">
-        <?= form_open('home/store'); ?>
+
+        <?= form_open('create'); ?>
+
         <div class="form-group">
             <lable>Movie Category</lable>
             <input type="text" name="title" id="title" class="form-control" />
+        </div>
+        <div class="form-group">
+            <lable>Release Date</lable>
+            <input type="date" name="releasedate" id="releasedate" class="form-control" />
+        </div>
+        <div class="form-group">
+            <lable>Publish Status</lable>
+            <select name="status" class="form-control">
+                <option>Active</option>
+                <option>Inactive</option>
+            </select>
         </div>
         <div class="">&nbsp;</div>
         <div class="form-group">
